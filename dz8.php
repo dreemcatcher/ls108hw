@@ -18,7 +18,15 @@ while или do-while (на ваше усмотрение) развернуть 
 
     $str='String Content and some more words bla bla bla';
     echo $str."<br>";
+    $pieces = explode(" ", $str);
+    print $pieces;
+    echo "<br>";
 
+    $i=1;
+    while ($i<count($pieces)){
+        echo
+        $i++;
+    }
 ?>
 </body>
 </html>

@@ -14,13 +14,14 @@
 Выведите значение созданной константы
 Попытайтесь изменить значение созданной константы.
  */
-    define ("SOMECONSTANT", "SomeConstantContent");
+    define ("SOMECONSTANT", "SomeConstantContent", true);
 
     if (defined("SOMECONSTANT")){
         echo "Константа существует";
         echo "<br>";
-        echo SOMECONSTANT;
-        //SOMECONSTANT=1;
+        echo SOMECONSTANT ."<br>";
+        define("SOMECONSTANT",'новое значение');
+        echo 'SOMECONSTANT = ', SOMECONSTANT, '<br>';
     }
     else
     {
