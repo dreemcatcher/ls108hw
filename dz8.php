@@ -26,16 +26,21 @@ while или do-while (на ваше усмотрение) развернуть 
     echo "<br>";
 
     $FinalPhrase = '';
+    // Нумерация массива с нуля
     $i=0;
 
     while ($i<count($pieces)){
         // Получаем номер элемента массива
         $PasteBack = $pieces[$i];
-        echo "Номерэлемента массива $i Приклеиваем слово {$PasteBack}\n";
+        echo "Номер элемента массива $i Приклеиваем слово {$PasteBack}\n";
         echo "<br>";
+        // Используем любой символ кроме пробела. "_" Будет таким символом.
         $FinalPhrase = $FinalPhrase ."_". $PasteBack;
         $i++;
     }
+echo "<br>";
+echo "<br>";
+echo "Итоговая склейка<br>";
 echo $FinalPhrase."<br>";
 ?>
 </body>

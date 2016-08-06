@@ -43,7 +43,6 @@ for ($i=1; $i<10; $i++){
                 echo "(".$proizv.")";
             }
         }
-
     }
     echo "<br>";
     $j=1;
