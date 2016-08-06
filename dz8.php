@@ -19,7 +19,7 @@ while или do-while (на ваше усмотрение) развернуть 
 строку используя любой символ, кроме пробела. Вывести результат.
 */
 
-    $str='String Content and some more words bla bla bla';
+    $str='At this moment we have some problems with Content and some more words bla bla bla';
     echo $str."<br>";
     $pieces = explode(" ", $str);
 
@@ -33,7 +33,7 @@ while или do-while (на ваше усмотрение) развернуть 
     // Нумерация массива с нуля
     $i=0;
 
-    while ($i<count($pieces)){
+    while (count($pieces)>$i){
         // Получаем номер элемента массива
         $PasteBack = $pieces[$i];
         echo "Номер элемента массива $i Приклеиваем слово {$PasteBack}\n";
@@ -42,10 +42,29 @@ while или do-while (на ваше усмотрение) развернуть 
         $FinalPhrase = $FinalPhrase ."_". $PasteBack;
         $i++;
     }
-echo "<br>";
-echo "<br>";
-echo "Итоговая склейка<br>";
-echo $FinalPhrase."<br>";
+    echo "<br>";
+    echo "<br>";
+    echo "Итоговая склейка<br>";
+    echo $FinalPhrase."<br>";
+
+
+    // развернуть массив всмысле в одратном порядке?
+    $j=(count($pieces)-1);
+    $FinalPhraseReverse = '';
+    while ($j>-1){
+        // Получаем номер элемента массива
+        $PasteBackOrder = $pieces[$j];
+        echo "Номер элемента массива $j Приклеиваем слово {$PasteBackOrder}\n";
+        echo "<br>";
+        // Используем любой символ кроме пробела. "_" Будет таким символом.
+        $FinalPhraseReverse = $FinalPhraseReverse ."_". $PasteBackOrder;
+        $j--;
+    }
+    echo "<br>";
+    echo "<br>";
+    echo "Итоговая склейка<br>";
+    echo $FinalPhraseReverse."<br>";
+
 ?>
 </body>
 </html>
