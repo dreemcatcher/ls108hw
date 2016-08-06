@@ -22,7 +22,11 @@ while или do-while (на ваше усмотрение) развернуть 
     $str='String Content and some more words bla bla bla';
     echo $str."<br>";
     $pieces = explode(" ", $str);
+
+    echo "<pre>";
     print_r ($pieces);
+    echo "</pre>";
+
     echo "<br>";
 
     $FinalPhrase = '';
