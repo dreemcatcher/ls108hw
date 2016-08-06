@@ -1,4 +1,6 @@
-<!doctype html>
+<?php
+error_reporting(-1);
+?><!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +8,7 @@
 </head>
 <body>
 <?php
+
 /*
     Задание #8
 
@@ -19,14 +22,21 @@ while или do-while (на ваше усмотрение) развернуть 
     $str='String Content and some more words bla bla bla';
     echo $str."<br>";
     $pieces = explode(" ", $str);
-    print $pieces;
+    print_r ($pieces);
     echo "<br>";
 
-    $i=1;
+    $FinalPhrase = '';
+    $i=0;
+
     while ($i<count($pieces)){
-        echo
+        // Получаем номер элемента массива
+        $PasteBack = $pieces[$i];
+        echo "Номерэлемента массива $i Приклеиваем слово {$PasteBack}\n";
+        echo "<br>";
+        $FinalPhrase = $FinalPhrase ."_". $PasteBack;
         $i++;
     }
+echo $FinalPhrase."<br>";
 ?>
 </body>
 </html>
